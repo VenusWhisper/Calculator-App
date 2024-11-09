@@ -1,8 +1,9 @@
+import 'package:calculator_app_v1/services/device_orientation.dart';
 import 'package:calculator_app_v1/views/calculator_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const CalculatorApp());
+  initializeApp(() => runApp(const CalculatorApp()));
 }
 
 class CalculatorApp extends StatelessWidget {
