@@ -6,12 +6,12 @@ class CalculatorButton extends StatelessWidget {
 
   // List of buttons --------------------------------------------------------------------------
   static const List<String> buttons = [
-    '', '', '', 'AC',
-    '√', '%', '(', ')',
+    'sin', 'cos', 'tan', 'AC',
+    '√', '%', 'π', '^',
     '7', '8', '9', '÷',
     '4', '5', '6', '×',
     '1', '2', '3', '-',
-    '0', '', '=', '+',
+    '0', 'Del', '=', '+',
   ];
   // ------------------------------------------------------------------------------------------
 
@@ -23,11 +23,11 @@ class CalculatorButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 3, 74, 67),
       ),
       child: Text(
         label,
-        style: const TextStyle(fontSize: 30, color: Colors.orangeAccent),
+        style: const TextStyle(fontSize: 26, color: Colors.white),
       ),
     );
   }

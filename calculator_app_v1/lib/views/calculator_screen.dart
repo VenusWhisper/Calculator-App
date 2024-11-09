@@ -12,7 +12,7 @@ class CalculatorScreen extends StatelessWidget {
           'Calculator',
           style: TextStyle(
             fontWeight: FontWeight.bold,
-            color: Colors.deepOrange,
+            color: Color.fromARGB(255, 3, 74, 67),
           ),
           ),
         centerTitle: true,
