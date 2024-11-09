@@ -1,11 +1,17 @@
+import 'package:calculator_app_v1/data/button_logic.dart';
 import 'package:calculator_app_v1/data/calculator_button.dart';
+import 'package:calculator_app_v1/data/providers.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CalculatorScreen extends StatelessWidget {
+class CalculatorScreen extends ConsumerWidget {
   const CalculatorScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    var display = ref.watch(displayProvider);
+    //var history = ref.watch(historyProvider);
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -14,7 +20,7 @@ class CalculatorScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
             color: Color.fromARGB(255, 3, 74, 67),
           ),
-          ),
+        ),
         centerTitle: true,
       ),
       body: Column(
@@ -26,9 +32,9 @@ class CalculatorScreen extends StatelessWidget {
               padding: const EdgeInsets.all(20),
               alignment: Alignment.centerRight,
               color: Colors.black12,
-              child: const Text(
-                '1', // FIXME display text needs to be changed!
-                style: TextStyle(
+              child: Text(
+                display, // TODO insert your display logic here
+                style: const TextStyle(
                   fontSize: 60,
                 ),
               ),
@@ -48,7 +54,10 @@ class CalculatorScreen extends StatelessWidget {
               itemCount: CalculatorButton.buttons.length,
               itemBuilder: (context, index) {
                 return CalculatorButton(
-                    label: CalculatorButton.buttons[index], onPressed: () {});
+                    label: CalculatorButton.buttons[index],
+                    onPressed: () {
+                      handleButtonPress(index, ref);
+                    });
               },
             ),
           )
