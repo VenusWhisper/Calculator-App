@@ -2,6 +2,8 @@ import 'package:calculator_app_v1/data/providers.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'calculator_button.dart'; // Import the file where CalculatorButton is defined
 
+//FIXME completely fix the entire file
+
 void handleButtonPress(int index, WidgetRef ref) {
   String label = CalculatorButton.buttons[index];
 
