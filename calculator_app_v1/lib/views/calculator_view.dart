@@ -1,11 +1,11 @@
 import 'package:calculator_app_v1/data/providers.dart';
-import 'package:calculator_app_v1/views/button_builder.dart';
-import 'package:calculator_app_v1/views/display_widget.dart';
+import 'package:calculator_app_v1/widgets/button_builder.dart';
+import 'package:calculator_app_v1/widgets/display_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class CalculatorScreen extends ConsumerWidget {
-  const CalculatorScreen({super.key});
+class CalculatorView extends ConsumerWidget {
+  const CalculatorView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

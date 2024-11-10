@@ -1,5 +1,5 @@
 import 'package:calculator_app_v1/services/device_orientation.dart';
-import 'package:calculator_app_v1/views/calculator_screen.dart';
+import 'package:calculator_app_v1/views/calculator_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,7 +14,7 @@ class CalculatorApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CalculatorScreen(),
+      home: CalculatorView(),
     );
   }
 }
